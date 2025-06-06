@@ -436,7 +436,7 @@ def test_segnet_model(model, test_loader):
     test_global_acc = 0.0
     test_class_acc = 0.0
     test_miou = 0.0
-    class_ious = torch.zeros(num_classes)
+    class_ious = torch.zeros(num_classes, device=device)
 
     with torch.no_grad():
         for images, labels in test_loader:
